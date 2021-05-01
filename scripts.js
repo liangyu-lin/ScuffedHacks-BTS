@@ -38,5 +38,6 @@ alert("Game Over")
 //makes dino jump once
 document.addEventListener("keydown", function(event){
   jump();
-
+      let soundEffect = new Audio("sounds/scoring.mp3");
+                    soundEffect.play()
 });
