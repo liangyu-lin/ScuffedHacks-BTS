@@ -52,7 +52,7 @@ top:130px;
   left: 580px;
 background-image:url("img/rock.png");
 background-size:20px 40px;
-  background-color: black;
+
 
 animation:block 1s infinite linear; /*const speed*/
 }
