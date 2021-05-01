@@ -1,5 +1,10 @@
 const dino = document.getElementById("dino");
 const cactus = document.getElementById("cactus");
+  const scoreDisplay = document.querySelector('#score');
+      let score = 0;
+
+
+
 
 function jump(){
 
@@ -17,6 +22,9 @@ if(dino.classList !="jump"){
 
 }
 
+
+
+
 let isAlive = setInterval(function (){
 // get current dino Y position
 let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
@@ -33,6 +41,7 @@ if(cactusLeft <50 && cactusLeft > 0 && dinoTop >= 140){
   //collision
   console.log("collision");
 alert("Game Over")
+
 }
 },10);
 //makes dino jump once
@@ -40,4 +49,8 @@ document.addEventListener("keydown", function(event){
   jump();
       let soundEffect = new Audio("sounds/scoring.mp3");
                     soundEffect.play()
+                           score += 10
+                scoreDisplay.innerHTML = score
 });
+
+
